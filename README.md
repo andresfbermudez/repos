@@ -7,7 +7,7 @@ This repository contains code for running a Patient Health Database
 
 This is written in Python.
 
-##Specifications
+## Specifications
 The database will contain:
 * Patient Name
 * Patient Age
@@ -20,3 +20,5 @@ The database will contain:
 1. Patient Gender
 1. Patient Status
 1. Patient info
+
+The variable name is `x_variable`.
