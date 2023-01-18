@@ -15,10 +15,12 @@ The database will contain:
 - A+
 - A-
 - B+
+- AB+
+- AB-
 
 ## Future additions
+1. Patient Address
 1. Patient Gender
-1. Patient Status
 1. Patient info
 
 The variable name is `x_variable`.
