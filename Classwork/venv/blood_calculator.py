@@ -61,5 +61,13 @@ def LDL_driver():
 def LDL_output(LDL_value, LDL_analy):
     print("The LDL result of {} is consider {}".format(LDL_value,LDL_analy))
 
+def total_input():
+    total_value= input("Enter the total cholesterol result: ")
+    total_value = int(total_value)
+    return total_value
+
+
+
+
 
 interface()
