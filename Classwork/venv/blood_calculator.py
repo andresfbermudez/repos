@@ -50,6 +50,10 @@ def LDL_analysis(LDL_int):
         answer= "Very High"
     return answer
 
+def LDL_driver():
+    LDL_in = LDL_input()
+    LDL_analy = LDL_analysis(LDL_in)
+    LDL_output(LDL_in,LDL_analy)
 
 
 
