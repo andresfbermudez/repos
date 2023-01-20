@@ -79,6 +79,8 @@ def total_driver():
     total_analy = total_analysis(total_in)
     total_output(total_in,total_analy)
 
+def total_output(total_value, total_analy):
+    print("The total result of {} is consider {}".format(total_value,total_analy))
 
 
 interface()
