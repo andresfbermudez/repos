@@ -74,6 +74,10 @@ def total_analysis(total_int):
     else:
         answer= "High"
     return answer
+def total_driver():
+    total_in = total_input()
+    total_analy = total_analysis(total_in)
+    total_output(total_in,total_analy)
 
 
 
