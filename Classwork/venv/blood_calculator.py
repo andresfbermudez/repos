@@ -1,5 +1,4 @@
 def interface():
-
     print("Blood Calculator")
     run = True
     while(run == True):
@@ -10,12 +9,11 @@ def interface():
         if choice == "9":
             run = False
         elif choice == "1":
-
+            HDL_driver()
     print("Program ending")
-interface()
 
 def HDL_input():
-    HDL_value= input("Enter the HDL result")
+    HDL_value= input("Enter the HDL result: ")
     HDL_value = int(HDL_value)
     return HDL_value
 
@@ -31,4 +29,9 @@ def HDL_analysis(HDL_int):
 def HDL_driver():
     HDL_in = HDL_input()
     HDL_analy = HDL_analysis(HDL_in)
-    return HDL_analy
+    HDL_output(HDL_in,HDL_analy)
+
+def HDL_output(HDL_value, HDL_analy):
+    print("The HDL result of {} is consider {}".format(HDL_value,HDL_analy))
+
+interface()
