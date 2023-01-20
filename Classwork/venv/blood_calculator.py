@@ -4,10 +4,13 @@ def interface():
     run = True
     while(run == True):
         print("Options:")
+        print("1-HDL")
         print("9-Quit")
         choice = input("Select an option:")
         if choice == "9":
             run = False
+        elif choice == "1":
+
     print("Program ending")
 interface()
 
@@ -24,3 +27,8 @@ def HDL_analysis(HDL_int):
     else:
         answer= "Low"
     return answer
+
+def HDL_driver():
+    HDL_in = HDL_input()
+    HDL_analy = HDL_analysis(HDL_in)
+    return HDL_analy
