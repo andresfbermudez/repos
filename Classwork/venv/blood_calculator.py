@@ -34,4 +34,12 @@ def HDL_driver():
 def HDL_output(HDL_value, HDL_analy):
     print("The HDL result of {} is consider {}".format(HDL_value,HDL_analy))
 
+def LDL_input():
+    LDL_value= input("Enter the LDL result: ")
+    LDL_value = int(LDL_value)
+    return LDL_value
+
+
+
+
 interface()
