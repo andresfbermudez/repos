@@ -26,8 +26,7 @@ def get_weight_input(){
     weight_input = input("Enter weight: ")
     return weight_input
 
-def dose_amount():
-
+def dose_amount(diagnosis,weight_input):
     weight_data = weight_input.split(" ")
     weight = float(weight_data[0])
     units = weight_data[1]
@@ -36,6 +35,9 @@ def dose_amount():
     dosages_mg_per_kg = [30, 10, 10, 12]
     dosage_mg_per_kg = dosages_mg_per_kg[diagnosis-1]
     dosage_mg_first_day = weight * dosage_mg_per_kg
+    return dosage_mg_per_kg,dosage_mg_first_day
+
+def print_dosage(dosage_mg_per_kg,dosage_mg_first_day)
     print("CORRECT DOSAGE")
     print("For a patient weighing {:.1f} kg,".format(weight))
     print("  the correct dosage is {:.1f} mg the first day"
