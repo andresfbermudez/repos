@@ -17,10 +17,13 @@ def dosing_input():
     diagnosis = int(input("Enter a number: "))
     return diagnosis
 
-def dose_amount():
+def print_weight_interface():
     print("PATIENT WEIGHT")
     print("Enter patient weight followed by units of kg or lb.")
     print("Examples:  65.3 lb      21.0 kg")
+    
+def dose_amount():
+    
     weight_input = input("Enter weight: ")
     weight_data = weight_input.split(" ")
     weight = float(weight_data[0])
