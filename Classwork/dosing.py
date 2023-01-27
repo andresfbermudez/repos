@@ -13,9 +13,11 @@ def print_dosing_interface():
     print("2 - Acute bacterial sinusitis")
     print("3 - Community-acquired pneumonia")
     print("4 - Pharyngitis/tonsilitis")
+def dosing_input():
+    diagnosis = int(input("Enter a number: "))
+    return diagnosis
 
 def dose_amount():
-    diagnosis = int(input("Enter a number: "))
     print("PATIENT WEIGHT")
     print("Enter patient weight followed by units of kg or lb.")
     print("Examples:  65.3 lb      21.0 kg")
