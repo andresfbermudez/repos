@@ -5,8 +5,7 @@
              type of medical treatment or diagnostics.
 """
 
-
-def dose_amount():
+def print_dosing_interface():
     print("Day One Dosing Guidelines")
     print("")
     print("Choose diagnosis:")
@@ -14,6 +13,8 @@ def dose_amount():
     print("2 - Acute bacterial sinusitis")
     print("3 - Community-acquired pneumonia")
     print("4 - Pharyngitis/tonsilitis")
+
+def dose_amount():
     diagnosis = int(input("Enter a number: "))
     print("PATIENT WEIGHT")
     print("Enter patient weight followed by units of kg or lb.")
