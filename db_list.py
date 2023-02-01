@@ -9,8 +9,13 @@ def main_driver():
     db.append(create_patient_entry("Charlie Chou", 1,52))
     print(db)
     print("Get patient Ann")
-    found_patient = get_patient_entry(1,db)
+    mrn_to_find =4
+    found_patient = get_patient_entry(mrn_to_find,db)
     print(found_patient)
+    if found_patient is False:
+        print("Patient mrn {} not found".format(mrn_to_find))
+    else:
+        print(found_patient)
 
 def get_patient_entry(mrn_to_find,db):
     for patient in db:
