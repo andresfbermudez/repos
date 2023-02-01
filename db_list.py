@@ -1,5 +1,5 @@
 def create_patient_entry(patient_name,patient_mrn,patient_age):
-    new_patient = [patient_name, patient_mrn, patient_age]
+    new_patient = [patient_name, patient_mrn, patient_age,[]]
     return new_patient
 
 def main_driver():
@@ -8,14 +8,14 @@ def main_driver():
     db.append(create_patient_entry("Bob Boyles", 2,45))
     db.append(create_patient_entry("Charlie Chou", 1,52))
     print(db)
-    print("Get patient Ann")
-    mrn_to_find =4
+    print(db)
+    mrn_to_find = 2
     found_patient = get_patient_entry(mrn_to_find,db)
-    print(found_patient)
     if found_patient is False:
-        print("Patient mrn {} not found".format(mrn_to_find))
+       print("Patient mrn {} not found".format(mrn_to_find))
     else:
-        print(found_patient)
+       add_test_to_patient(db,mrn_to_find,"HDL",120)
+    
 
 def get_patient_entry(mrn_to_find,db):
     for patient in db:
@@ -23,6 +23,11 @@ def get_patient_entry(mrn_to_find,db):
             return patient
     else:
         return False
+
+def add_test_to_patient(db, mrn_to_find,test_name,test_value):
+    patient=get_patient_entry(mrn_to_find,db)
+    patient[3].append([test_name,test_value])
+    
 if __name__=="__main__":
     main_driver()
 
