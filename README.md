@@ -12,6 +12,9 @@ The database will contain:
 * Patient Name
 * Patient Age
 * Patient Bloodtype
+* Patient Test Results, List of lists 
+ - Each test is represented by [test_name,test_value]
+ where test_name is a string and test_value is an integer/float
 - A+
 - A-
 - B+
