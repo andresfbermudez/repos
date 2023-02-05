@@ -24,3 +24,14 @@ def test_find_slope():
     answer = find_slope((2,2),(4,4))
     #Assert
     assert answer == expected
+
+def test_find_intercept():
+    from ExerciseFeb3 import find_intercept
+    #Arrange
+    point1 = (5,5)
+    point2 = (10,15)
+    expected = -5
+    #Act
+    answer = find_intercept((5,5),(10,15))
+    #Assert
+    assert answer == expected
