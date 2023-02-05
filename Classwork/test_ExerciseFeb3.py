@@ -1,4 +1,4 @@
-def test_find_y_value(slope,intercept,x_input):
+def test_find_y_value(slope, intercept, x_input):
     from ExerciseFeb3 import find_y_value
     #Arrange
     expected = slope*x_input + intercept
