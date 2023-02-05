@@ -1,7 +1,7 @@
 def interface():
     print("Blood Calculator")
     run = True
-    while(run is True):
+    while (run is True):
         print("Options:")
         print("1-HDL")
         print("2-LDL")
@@ -28,7 +28,7 @@ def HDL_input():
 def HDL_analysis(HDL_int):
     if HDL_int >= 60:
         answer = "Normal"
-    elif 40 <= HDL_int <60:
+    elif 40 <= HDL_int < 60:
         answer = "Borderline Low"
     else:
         answer = "Low"
