@@ -38,7 +38,7 @@ def HDL_analysis(HDL_int):
 def HDL_driver():
     HDL_in = HDL_input()
     HDL_analy = HDL_analysis(HDL_in)
-    HDL_output(HDL_in,HDL_analy)
+    HDL_output(HDL_in, HDL_analy)
 
 
 def HDL_output(HDL_value, HDL_analy):
