@@ -1,6 +1,6 @@
 def sqrt(n):
     if type(n) is str:
-        raise TypeError
+        raise TypeError("You can't send string")
     if n < 0:
         raise ValueError("You can't use negative numbers")
     
