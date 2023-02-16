@@ -18,8 +18,16 @@ def main_driver():
     room_numbers = ["103", "232", "333"]
     print(db)
     print(db)
+    print("{} is an {}".format(get_full_name(db[3]),minor_or_adult(db[3])))
     print_directory(db, room_numbers)
     print(get_test_result(db, 2, "LDL"))
+
+
+def minor_or_adult(patient):
+    if patient["Age"] >= 18:
+        return "adult"
+    else:
+        return "minor"
 
 
 def print_directory(db, room_numbers):
