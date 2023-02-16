@@ -7,45 +7,42 @@ def create_patient_entry(first_name, last_name, patient_mrn, patient_age):
 
 
 def main_driver():
-    db = []
-    db.append(create_patient_entry("Ann", "Ables", 1, 34))
-    db.append(create_patient_entry("Bob", "Boyles", 2, 45))
-    db.append(create_patient_entry("Chris", "Chou", 3, 52))
+    db = {}
+    db[1] = create_patient_entry("Ann", "Ables", 1, 34)
+    db[2] = create_patient_entry("Bob", "Boyles", 2, 45)
+    db[3] = create_patient_entry("Chris", "Chou", 3, 52)
     print(db)
     add_test_to_patient(db, 1, "HDL", 120)
     add_test_to_patient(db, 2, "LDL", 100)
     add_test_to_patient(db, 2, "HDL", 99)
     room_numbers = ["103", "232", "333"]
     print(db)
-    return
     print(db)
     print_directory(db, room_numbers)
     print(get_test_result(db, 2, "LDL"))
 
 
 def print_directory(db, room_numbers):
-    for i, patient in enumerate(db):
-        print("Patient {} is in room {}".format(patient["First Name"], room_numbers[i]))
-    for patient, rn in zip(db, room_numbers):
-        print("Patient {} is in room {}".format(patient["First Name"], rn))
-
+    for patient in db.values():
+        print("Patient {} is in room {}".format(patient["First Name"],
+                                                room_numbers[patient["MRN"]-1]))
 def get_full_name(patient):
     full_name = patient["First Name"] + " " + patient["Last Name"]
     return full_name
 
 
 def print_database(db):
-    for patient in db:
+    for patient in db.values():
         output = "MRN: {}, Full Name: {}, Age: {}".format(
             patient["MRN"], get_full_name(patient), patient["Age"])
         print(output)
 
 
 def get_patient_entry(db, mrn_to_find):
-    for patient in db:
-        if patient["MRN"] == mrn_to_find:
-            return patient
-    return False
+    patient = db.get(mrn_to_find)
+    if patient is None:
+        return False
+    return patient
 
 
 def add_test_to_patient(db, mrn_to_find, test_name, test_value):
